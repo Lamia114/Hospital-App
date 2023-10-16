@@ -1,0 +1,79 @@
+{
+    "admin_doctors": [
+      {
+        "Name": "Ahmed",
+        "id": 1,
+        "specilization": "",
+        "Mobile": "122365498",
+        "Email": "Ahmed@gmail.com"
+      },
+      {
+       
+        "Name": "Huda",
+        "id": 2,
+        "specilization": "",
+        "Mobile": "122365498",
+        "Email": "Huda@gmail.com"
+      },
+      {
+        "Name": "Suad",
+        "id": 3,
+        "specilization": "",
+        "Mobile": "122365498",
+        "Email": "Suad@gmail.com"
+      },
+      {
+        "Name": "Khalid",
+        "id": 4,
+        "specilization": "",
+        "Mobile": "122365498",
+        "Email": "Khalid@gmail.com"
+      },
+      {
+       
+        "Name": "Lamia",
+        "id": 5,
+        "specilization": "",
+        "Mobile": "122365498",
+        "Email": "Lamia@gmail.com"
+      }
+    ],
+    "appoinments":[
+        {
+           "name":"",
+           "Date":"",
+           "mobile":"",
+           "clinic":""
+
+         },
+         {
+            "name":"",
+            "Date":"",
+            "mobile":"",
+            "clinic":""
+ 
+          },
+          {
+            "name":"",
+            "Date":"",
+            "mobile":"",
+            "clinic":""
+ 
+          },
+          {
+            "name":"",
+            "Date":"",
+            "mobile":"",
+            "clinic":""
+ 
+          },
+          {
+            "name":"",
+            "Date":"",
+            "mobile":"",
+            "clinic":""
+ 
+          } 
+]
+    
+  }

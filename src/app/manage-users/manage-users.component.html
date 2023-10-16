@@ -1,0 +1,67 @@
+
+
+<div class="container mt-4">
+  <h2>Doctors Management</h2>
+  
+  <!-- User Add/Edit Form -->
+  <div class="card">
+    <div class="card-header">
+      Add/Edit Doctors
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" required>
+        </div>
+        <div class="form-group">
+          <label for="id">ID:</label>
+          <input type="text" class="form-control" id="id" name="id" [(ngModel)]="user.id" required>
+        </div>
+        <div class="form-group">
+  <label for="specialization">Specialization:</label>
+  <select class="form-control" id="specialization" name="specialization" [(ngModel)]="user.specialization" required>
+    <option value="Cardiology">Cardiology</option>
+    <option value="Dermatology">Dermatology</option>
+    <option value="Orthopedics">Orthopedics</option>
+    <!-- Add more specialization options here -->
+  </select>
+</div>
+
+        
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- User List -->
+  <h3>Doctors List</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>ID</th>
+        <th>Specialization</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>{{ u.name }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{u.id}}</td>
+        <td>{{u.specialization}}</td>
+        <td>
+          <button class="btn btn-sm btn-warning" (click)="editUser(u)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteUser(u)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

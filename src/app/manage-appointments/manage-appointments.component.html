@@ -1,0 +1,61 @@
+<div class="container mt-4">
+    <h2>Appointments Management</h2>
+  
+    <div class="card">
+      <div class="card-header">
+        Add/Edit Appointment
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="submitAppointment()">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newAppointment.name" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control" id="date" name="date" [(ngModel)]="newAppointment.date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="number" class="form-control" id="number" name="mobile" [(ngModel)]="newAppointment.mobile" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="clinic">Clinic:</label>
+            <select class="form-control" id="clinic" name="clinic" [(ngModel)]="newAppointment.clinic" required>
+              <option *ngFor="let clinic of clinicOptions" [value]="clinic">{{ clinic }}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Appointment</button>
+        </form>
+      </div>
+    </div>
+  
+    <h3>Appointments List</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Clinic</th>
+          <th>Mobile</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.name }}</td>
+          <td>{{ appointment.date }}</td>
+          <td>{{appointment.mobile}}</td>
+          <td>{{ appointment.clinic }}</td>
+          <td>
+            <button class="btn btn-sm btn-warning" (click)="editAppointment()">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteAppointment()">Delete</button>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

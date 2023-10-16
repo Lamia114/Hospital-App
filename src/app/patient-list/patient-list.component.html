@@ -1,0 +1,20 @@
+<h2>Patient List</h2>
+
+<table class="table table-bordered">
+  <thead class="custom-thead">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Contact Information</th>
+      <th>Appointment Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{ patient.id }}</td>
+      <td>{{ patient.name }}</td>
+      <td>{{ patient.contactInfo }}</td>
+      <td>{{ patient.appointmentDetails }}</td>
+    </tr>
+  </tbody>
+</table>

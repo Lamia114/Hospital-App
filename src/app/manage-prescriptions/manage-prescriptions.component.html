@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2>Create Prescription</h2>
+  <form (ngSubmit)="createPrescription()" #prescriptionForm="ngForm">
+    <div class="form-group">
+      <label for="patientName">Patient Name:</label>
+      <input type="text" class="form-control" id="patientName" name="patientName" [(ngModel)]="newPrescription.patientName" required>
+    </div>
+    <div class="form-group">
+      <label for="medicationName">Medication Name:</label>
+      <input type="text" class="form-control" id="medicationName" name="medicationName" [(ngModel)]="newPrescription.medicationName" required>
+    </div>
+    <div class="form-group">
+      <label for="dosage">Dosage:</label>
+      <input type="text" class="form-control" id="dosage" name="dosage" [(ngModel)]="newPrescription.dosage" required>
+    </div>
+    <div class="form-group">
+      <label for="instructions">Instructions:</label>
+      <textarea class="form-control" id="instructions" name="instructions" [(ngModel)]="newPrescription.instructions" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Prescription</button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+  </form>
+</div>
